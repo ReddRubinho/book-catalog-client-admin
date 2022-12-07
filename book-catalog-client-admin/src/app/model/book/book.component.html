@@ -1,1 +1,21 @@
 <p>book works!</p>
+
+<table>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <th scope="row">{{book.isbn}}</th>
+            <td>{{book.authors}}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.premiere}}</td>
+            <td>{{book.pages}}</td>
+            <td>{{book.plot}}</td>
+            <td>{{book.bookImage}}</td>
+        </tr>
+    </tbody>
+</table>
+title:string;
+  authors:string;
+  publisher:string;
+  pages:number;
+  plot:string;
+  bookImage:string;
