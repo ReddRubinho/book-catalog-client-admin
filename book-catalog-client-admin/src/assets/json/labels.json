@@ -1,0 +1,11 @@
+{
+    "inicio":"Inicio",
+    "catalogo":"Catálogo",
+    "libros":"Mis libros",
+    "informacion":"Mi Información",
+    "perfil":"Perfil",
+    "admin":"Cambiar a admin",
+    "sesion":"Iniciar Sesión",
+    "cerrarsesion":"Cerrar Sesión",
+    "contrasena":"He olvidado la contraseña"
+}

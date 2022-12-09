@@ -1,15 +1,14 @@
 <p>book works!</p>
 
-<table>
-    <tbody>
-        <tr *ngFor="let book of books">
+<table class="table table-striped">
+    <tbody *ngFor="let book of books">
+
             <th scope="row">{{book.isbn}}</th>
-            <td>{{book.authors}}</td>
-            <td>{{book.publisher}}</td>
-            <td>{{book.premiere}}</td>
-            <td>{{book.pages}}</td>
-            <td>{{book.plot}}</td>
-            <td>{{book.bookImage}}</td>
-        </tr>
+            <tr scope="row">{{book.authors}}</tr>
+            <tr scope="row">{{book.publisher}}</tr>
+            <tr scope="row">{{book.premiere}}</tr>
+            <tr scope="row">{{book.pages}}</tr>
+            <tr scope="row">{{book.plot}}</tr>
+            <tr scope="row">{{book.bookImage}}</tr>
     </tbody>
 </table>
