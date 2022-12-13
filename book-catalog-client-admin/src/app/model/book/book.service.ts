@@ -8,21 +8,25 @@ import { Book } from './book';
 export class BookService {
   private url: string = 'http://localhost:8080/books';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   //get all books
   getAll(): Observable<Book[]> {
     return this.http.get<Book[]>(this.url);
   }
 
-  //post a new book
-  create(book: Book): Observable<Book> {
-    return this.http.post<Book>(this.url, book);
+  getByTitle(title: string):Observable<Book[]> {
+    return this.http.get<Book[]>(this.url + '/title/' + title)
   }
 
   //get a books
-  get(isbn:number): Observable<Book> {
+  get(isbn: string): Observable<Book> {
     return this.http.get<Book>(this.url + '/' + isbn);
+  }
+
+  //post a new book
+  create(book: Book): Observable<Book> {
+    return this.http.post<Book>(this.url, book);
   }
 
   //update a book
@@ -31,7 +35,7 @@ export class BookService {
   }
 
   //delete a book
-  delete(isbn:number):Observable<Book>{
+  delete(isbn: string): Observable<Book> {
     return this.http.delete<Book>(this.url + '/' + isbn)
   }
 }

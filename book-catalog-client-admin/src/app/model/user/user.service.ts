@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  //get all books
+  //get all users
   getAll(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
   }
@@ -22,7 +22,7 @@ export class UserService {
     return this.http.post<User>(this.url, user);
   }
 
-  //get a books
+  //get a user
   get(username: string): Observable<User> {
     return this.http.get<User>(this.url + '/' + username);
   }

@@ -7,5 +7,6 @@
     "admin":"Cambiar a admin",
     "sesion":"Iniciar Sesión",
     "cerrarsesion":"Cerrar Sesión",
-    "contrasena":"He olvidado la contraseña"
+    "contrasena":"He olvidado la contraseña",
+    "search":"Buscar por título"
 }

@@ -1,14 +1,39 @@
-<p>book works!</p>
-
-<table class="table table-striped">
-    <tbody *ngFor="let book of books">
-
-            <th scope="row">{{book.isbn}}</th>
-            <tr scope="row">{{book.authors}}</tr>
-            <tr scope="row">{{book.publisher}}</tr>
-            <tr scope="row">{{book.premiere}}</tr>
-            <tr scope="row">{{book.pages}}</tr>
-            <tr scope="row">{{book.plot}}</tr>
-            <tr scope="row">{{book.bookImage}}</tr>
-    </tbody>
-</table>
+<mat-grid-list *ngIf="book" rowHeight="1:1" cols="2">
+  <mat-grid-tile>
+    <img src="assets\images\{{book.bookImage}}">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th>Título:</th>
+          <td>{{book.title}}</td>
+        </tr>
+        <tr>
+          <th>Isbn:</th>
+          <td>{{book.isbn}}</td>
+        </tr>
+        <tr>
+          <th>Autores:</th>
+          <td>{{book.authors}}</td>
+        </tr>
+        <tr>
+          <th>Editorial:</th>
+          <td>{{book.publisher}}</td>
+        </tr>
+        <tr>
+          <th>Fecha de salida:</th>
+          <td>{{book.premiere}}</td>
+        </tr>
+        <tr>
+          <th>Páginas</th>
+          <td>{{book.pages}}</td>
+        </tr>
+        <tr>
+          <th>Argumento</th>
+          <td>{{book.plot}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-grid-tile>
+</mat-grid-list>
