@@ -34,4 +34,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['catalog']);
   }
 
+  getCatalog() {
+    this.dataService.findAll();
+    this.router.navigate(['catalog'])
+  }
+
 }
