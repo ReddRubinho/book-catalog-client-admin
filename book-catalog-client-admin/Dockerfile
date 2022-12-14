@@ -1,10 +1,12 @@
-### STAGE 1: Build ###
-FROM node:12.7-alpine AS build
-WORKDIR /usr/src/app
-COPY package.json package-lock.json ./
+#stage 1
+FROM node:18.12.0 as node
+COPY . /app
+WORKDIR /app
 RUN npm install
-COPY . .
 RUN npm run build
-### STAGE 2: Run ###
-FROM nginx:1.17.1-alpine
-COPY dist/book-catalog-client-admin /usr/share/nginx/html
+#stage 2
+FROM nginx:1.17.10-alpine
+EXPOSE 4200:80
+COPY --from=node /app/dist/book-catalog-client-admin /usr/share/nginx/html
+
+
